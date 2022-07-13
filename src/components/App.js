@@ -2,11 +2,11 @@ import "../css/App.css";
 import { useEffect, useState } from "react";
 import ListBooks from "./ListBooks";
 import SearchBooks from "./SearchBooks";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import * as BooksAPI from "../utils/BooksAPI";
 
 function App() {
-  let nav = useNavigate();
+  // let nav = useNavigate();
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ function App() {
     };
 
     update();
-    nav("/");
+    // nav("/");
   };
 
   return (

@@ -1,5 +1,6 @@
 import BookShelf from "./BookShelf";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const ListBooks = ({ books, onUpdate }) => {
   const wantToRead = books.filter((book) => book.shelf === "wantToRead");
@@ -48,6 +49,11 @@ const ListBooks = ({ books, onUpdate }) => {
       </div>
     </div>
   );
+};
+
+ListBooks.propTypes = {
+  books: PropTypes.array.isRequired,
+  onUpdate: PropTypes.func.isRequired,
 };
 
 export default ListBooks;

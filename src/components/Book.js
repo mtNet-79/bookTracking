@@ -1,4 +1,5 @@
 import UpdateShelf from "./UpdateShelf";
+import PropTypes from "prop-types";
 
 const Book = ({ book, handleUpdate }) => {
   const updateShelf = (shelf) => {
@@ -25,6 +26,11 @@ const Book = ({ book, handleUpdate }) => {
       <div className="book-authors">{authors}</div>
     </div>
   );
+};
+
+Book.propTypes = {
+  book: PropTypes.object.isRequired,
+  handleUpdate: PropTypes.func.isRequired,
 };
 
 export default Book;
